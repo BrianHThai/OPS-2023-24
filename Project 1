@@ -1,0 +1,29 @@
+#define LED 7
+#define SENS 18
+
+
+void setup() {
+
+
+ pinMode(LED, OUTPUT);
+ pinMode(SENS, INPUT);
+ Serial.begin(9600);
+
+
+}
+
+
+void loop() {
+
+
+ int sensorValue = analogRead(SENS);
+ Serial.println(sensorValue);
+  digitalWrite(LED, HIGH);
+ delay(sensorValue);
+
+
+ digitalWrite(LED, LOW);
+ delay(sensorValue);
+
+
+}
